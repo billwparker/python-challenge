@@ -1,0 +1,35 @@
+
+
+# We need to read in all of the rows (looping through all of the rows - Day 2, Activity 8)
+
+
+total_profit_losses = 0
+total_months = 0
+
+sum_profit_losses = 0
+
+
+# In the for loop, we need to get the profit/losses
+
+    profit_losses = row[1]
+
+    total_profit_losses = total_profit_losses + profit_losses
+    total_months = total_months + 1
+
+    if total_months > 1:
+      change = profit_losses - last_profit_losses
+
+      sum_profit_losses = sum_profit_losses + change
+
+
+    last_profit_losses = row[1]
+
+
+# After the loop, write out our summary stuff
+print('Financial Analysis')
+print('----------------------')
+
+# Print other lines
+# Print out total_profit_losses
+
+# Print out the average of profit_losses, which is sum_profit_losses / (total_months - 1)
